@@ -1,0 +1,232 @@
+@charset "UTF-8";
+/**
+*** least.js 2
+*** Author: Kamil Czujowski - @kamilczujowski
+*** Version: 2.2
+*** Made with ♥	in Hamburg, Germany.
+*** http://kamilczujowski.de
+**/
+/* @group Import */
+/**
+*** least.js 2
+*** Author: Kamil Czujowski - @kamilczujowski
+*** Version: 2.2.0
+*** Made with ♥	in Hamburg, Germany.
+*** http://kamilczujowski.de
+**/
+
+/* @end */
+/**
+*** least.js 2
+*** Author: Kamil Czujowski - @kamilczujowski
+*** Version: 2.2.0
+*** Made with ♥ in Hamburg, Germany.
+*** http://kamilczujowski.de
+**/
+/* @group Mixins */
+/* @end */
+/**
+*** least.js 2
+*** Author: Kamil Czujowski - @kamilczujowski
+*** Version: 2.2.0
+*** Made with ♥	in Hamburg, Germany.
+*** http://kamilczujowski.de
+**/
+/* @group Options */
+/* @group Master */
+/* enable (true) or disable (false) thumbnails title text */
+/* enable (true) or disable (false) thumbnails border */
+/* @end */
+/* @group Vars: Colors */
+/* @end */
+/* @group Gallery-Fullscreen */
+/* default size for fullscreen preview  */
+/* @end */
+/* @group Gallery-Thumbails */
+/* default "width" size for thumbnails */
+/* default "height" size for thumbnails */
+/* @end */
+/* @end */
+/**
+*** least.js 2
+*** Author: Kamil Czujowski - @kamilczujowski
+*** Version: 2.2.0
+*** Made with ♥ in Hamburg, Germany.
+*** http://kamilczujowski.de
+**/
+/* @group Gallery */
+#least {
+
+  position: relative;
+  text-align: center;
+  /* @group Fullimage */
+  /* @end */
+  /* @group Smallimages */
+}
+
+
+/* end */
+/* @end group */
+
+/*# sourceMappingURL=least.min.css.map */
+
+/*=========================================
+  Plataforma Galery
+==========================================*/
+.figure {
+  width: 23%;
+  
+  vertical-align: top;
+  display: inline-block;
+  margin: 0 10px 10px 0;
+
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.04), 0 2px 10px 0 rgba(0, 0, 0, 0.06);
+}
+.figure .img-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: block;
+    height: auto;
+    max-width: 100%;
+
+}
+.figure #galeria {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  -webkit-transition: -webkit-transform 400ms;
+  transition: transform 400ms;
+}
+.figure:hover #galeria {
+  -webkit-transform: scale3d(1.2, 1.2, 1);
+  transform: scale3d(1.2, 1.2, 1);
+}
+.figure:hover .overlaygalery {
+  opacity: 1;
+}
+.figure:hover .overlaygalery .buttons a {
+  -webkit-transform: scale3d(.9, .9, .9);
+  transform: scale3d(.9, .9, .9);
+}
+.figure .overlaygalery {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  text-align: center;
+  background-color: rgba(1,1,1,.7);
+  opacity: 0;
+  -webkit-transition: opacity 400ms;
+  transition: opacity 400ms;
+}
+.figure .overlaygalery a {
+  display: inline-block;
+  color: #fff;
+  padding: 7px 15px;
+  border: 1px solid #fff;
+  border-radius: 1px;
+  margin-top: 33%;
+  -webkit-transform: scale3d(0, 0, 0);
+  transform: scale3d(0, 0, 0);
+
+}
+.figure .overlaygalery a:hover {
+  text-decoration: none;
+}
+.figure .overlaygalery:hover a {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+}
+
+.figure .overlaygalery {
+  padding: 20px 25px;
+  margin-top: 0;
+  color: #666;
+}
+.figure .overlaygalery h4 {
+  margin: 0;
+}
+.figure .overlaygalery h4 a {
+  color: #02bdd5;
+}
+.figure .overlaygalery p {
+  font-size: 14px;
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+
+
+
+/*------------Content------------------_*/
+.jumbotron{
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 250px;
+  position: relative;
+  overflow: auto;
+}
+.jumbotron h1 {
+    font-size: 20px;
+}
+.jumbotron p {
+    font-size: 14px;
+    text-align: justify-all;
+
+
+}
+
+@media screen and (min-width: 768px) {
+  .jumbotron {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+  .container .jumbotron,
+  .container-fluid .jumbotron {
+    padding-right: 28px;
+    padding-left: 28px;
+  }
+  .jumbotron h1,
+  .jumbotron .h1 {
+    font-size: 20px;
+  }
+  .jumbotron p {
+    font-size: 13px;
+}
+}
+
+::-webkit-scrollbar{
+  width: 7px;
+
+}
+::-webkit-scrollbar-button{
+  width:8px;
+  height: 5px;
+}
+::-webkit-scrollbar-track{
+  background:#3c454e;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb{
+  background: -webkit-linear-gradient(top, #f4f4f4, #CFCABF);
+  -webkit-box-shadow:   inset 0 1px 0 rgba(255,255,225,.5),
+                inset 1px 0 0 rgba(255,255,255,.4),
+                inset 0 1px 2px rgba(255,255,255,.3);
+ 
+  border:thin solid #87877F;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: -webkit-linear-gradient(top, #CFCABF, #f4f4f4);
+}
+/* Pseudo-clase */
+::-webkit-scrollbar-thumb:window-inactive {
+  background: #CFCABF;
+}
+
+
+
+
